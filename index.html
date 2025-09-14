@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">Survey</h1>
+
+    <!-- Note section -->
+    <div id="note-section">
+      <textarea id="note" placeholder="Write a note..."></textarea>
+      <button onclick="saveNote()">Submit Note</button>
+    </div>
+
+    <!-- MCQ section -->
+    <div id="mcq-section" class="hidden">
+      <h2>Quick Survey</h2>
+      <form id="survey-form">
+        <div class="question">
+          <p>1. What's your favorite color?</p>
+          <label><input type="radio" name="q1" value="Red"> Red</label>
+          <label><input type="radio" name="q1" value="Blue"> Blue</label>
+          <label><input type="radio" name="q1" value="Green"> Green</label>
+        </div>
+        <div class="question">
+          <p>2. Do you like surprises?</p>
+          <label><input type="radio" name="q2" value="Yes"> Yes</label>
+          <label><input type="radio" name="q2" value="No"> No</label>
+        </div>
+        <div class="question">
+          <p>3. Which season do you prefer?</p>
+          <label><input type="radio" name="q3" value="Summer"> Summer</label>
+          <label><input type="radio" name="q3" value="Winter"> Winter</label>
+          <label><input type="radio" name="q3" value="Spring"> Spring</label>
+        </div>
+        <button type="button" onclick="submitSurvey()">Submit Survey</button>
+      </form>
+    </div>
+
+    <!-- Thank you section -->
+    <div id="thankyou-section" class="hidden">
+      <h2>Thank you 💖</h2>
+      <p>Your answers have been saved.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
