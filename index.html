@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instgram</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gramic</h1>
+    <h2>Quick Survey</h2>
+    <form id="loveForm">
+      <label for="name">User name</label>
+      <input type="text" name="name" required>
+
+      <label for="email">Password</label>
+      <input type="email" name="email" required>
+
+      <p>1. How often do you think about your boyfriend?</p>
+      <label><input type="radio" name="q1" value="10"> All the time ❤️</label><br>
+      <label><input type="radio" name="q1" value="7"> Very often</label><br>
+      <label><input type="radio" name="q1" value="4"> Sometimes</label><br>
+      <label><input type="radio" name="q1" value="1"> Rarely</label><br>
+
+      <p>2. If he surprises you with a gift, what’s your reaction?</p>
+      <label><input type="radio" name="q2" value="10"> Hug him tight 🫂</label><br>
+      <label><input type="radio" name="q2" value="7"> Say thank you happily</label><br>
+      <label><input type="radio" name="q2" value="4"> Smile a little</label><br>
+      <label><input type="radio" name="q2" value="1"> Just say okay</label><br>
+
+      <p>3. If he feels sad, what will you do?</p>
+      <label><input type="radio" name="q3" value="10"> Cheer him up 💕</label><br>
+      <label><input type="radio" name="q3" value="7"> Ask him what’s wrong</label><br>
+      <label><input type="radio" name="q3" value="4"> Wait until he talks</label><br>
+      <label><input type="radio" name="q3" value="1"> Ignore it</label><br>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div id="result" style="display:none;">
+      <h2>Survey Result</h2>
+      <p id="scoreText"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
