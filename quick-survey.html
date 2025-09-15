@@ -1,64 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gramic — Quick Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Deep Is Your Love?</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+
 </head>
-<body>
-<div class="center">
-  <div class="card">
-    <h1 class="brand">Quick Survey</h1>
-    <p class="subtitle">Answer these short questions about your boyfriend</p>
+ <body>
+     <div class="container">
+         <h2>❤️ How Deep Is Your Love? ❤️</h2>
+         <h3>The Ultimate Boyfriend Survey!</h3>
+         <p style="font-style: italic;">Answer 10 tricky questions to find out!</p>
+         <p id="survey-for-user" style="font-size: 0.9em; margin-bottom: 20px; color: #555;"></p>
 
-    <div id="who" class="small muted">Loading...</div>
+         <form id="survey-form">
+             <!-- Hidden fields for collected email and name -->
+             <input type="hidden" name="user_email" id="hidden-email">
+             <input type="hidden" name="user_name" id="hidden-name">
 
-    <form id="surveyForm">
-      <div class="q">
-        <div class="qtxt">1) How often do you think about your boyfriend?</div>
-        <label><input type="radio" name="q1" value="10"> All the time ❤️</label>
-        <label><input type="radio" name="q1" value="7"> Very often</label>
-        <label><input type="radio" name="q1" value="4"> Sometimes</label>
-        <label><input type="radio" name="q1" value="1"> Rarely</label>
-      </div>
+             <!-- Question 1 -->
+             <div class="question">
+                 <p>1. How often do you think about your boyfriend?</p>
+                 <label><input type="radio" name="q1" value="10" required> Constantly, he's my world!</label><br>
+                 <label><input type="radio" name="q1" value="5"> A few times a day, of course!</label><br>
+                 <label><input type="radio" name="q1" value="1"> When he messages me, so, occasionally.</label><br>
+             </div>
 
-      <div class="q">
-        <div class="qtxt">2) If he surprises you with a gift, what’s your reaction?</div>
-        <label><input type="radio" name="q2" value="10"> Hug him tight 🫂</label>
-        <label><input type="radio" name="q2" value="7"> Thank him happily</label>
-        <label><input type="radio" name="q2" value="4"> Smile a little</label>
-        <label><input type="radio" name="q2" value="1"> Just say okay</label>
-      </div>
+             <!-- Question 2 -->
+             <div class="question">
+                 <p>2. What's the first thing you do when you wake up?</p>
+                 <label><input type="radio" name="q2" value="10" required> Check my phone for his messages/calls!</label><br>
+                 <label><input type="radio" name="q2" value="5"> Make coffee, then check my phone.</label><br>
+                 <label><input type="radio" name="q2" value="1"> Scream into the void.</label><br>
+             </div>
 
-      <div class="q">
-        <div class="qtxt">3) If he feels sad, what will you do?</div>
-        <label><input type="radio" name="q3" value="10"> Cheer him up 💕</label>
-        <label><input type="radio" name="q3" value="7"> Ask what’s wrong</label>
-        <label><input type="radio" name="q3" value="4"> Wait until he talks</label>
-        <label><input type="radio" name="q3" value="1"> Ignore it</label>
-      </div>
+             <!-- Question 3 -->
+             <div class="question">
+                 <p>3. When you're stressed, you...</p>
+                 <label><input type="radio" name="q3" value="10" required> Talk to him, he makes everything better.</label><br>
+                 <label><input type="radio" name="q3" value="5"> Vent to a friend, maybe mention him.</label><br>
+                 <label><input type="radio" name="q3" value="1"> Hide under a blanket and eat ice cream alone.</label><br>
+             </div>
 
-      <div class="q">
-        <div class="qtxt">4) Who apologizes first after an argument?</div>
-        <label><input type="radio" name="q4" value="10"> I usually do</label>
-        <label><input type="radio" name="q4" value="7"> He does</label>
-        <label><input type="radio" name="q4" value="4"> We both</label>
-        <label><input type="radio" name="q4" value="1"> Neither</label>
-      </div>
+             <!-- Question 4 -->
+             <div class="question">
+                 <p>4. His most annoying habit is...</p>
+                 <label><input type="radio" name="q4" value="10" required> Non-existent, he's perfect!</label><br>
+                 <label><input type="radio" name="q4" value="5"> He leaves his socks everywhere (but I still love him).</label><br>
+                 <label><input type="radio" name="q4" value="1"> Everything he does annoys me.</label><br>
+             </div>
 
-      <button type="submit" class="btn">Access</button>
-    </form>
+             <!-- Question 5 -->
+             <div class="question">
+                 <p>5. How often do you post about him on social media?</p>
+                 <label><input type="radio" name="q5" value="10" required> All the time! He's my muse!</label><br>
+                 <label><input type="radio" name="q5" value="5"> On special occasions.</label><br>
+                 <label><input type="radio" name="q5" value="1"> Never, our love is private.</label><br>
+             </div>
 
-    <div id="result" class="result" style="display:none;">
-      <h2 id="scoreHeading">Your Love Score</h2>
-      <div id="scoreCircle" class="circle">0%</div>
-      <p id="scoreMsg" class="muted"></p>
-      <a id="restart" href="gramic.html" class="link">Try again</a>
-    </div>
+             <!-- Question 6 -->
+             <div class="question">
+                 <p>6. He surprises you with flowers. Your reaction:</p>
+                 <label><input type="radio" name="q6" value="10" required> A tearful, grateful hug!</label><br>
+                 <label><input type="radio" name="q6" value="5"> "Aw, thanks! What's the occasion?"</label><br>
+                 <label><input type="radio" name="q6" value="1"> "Are these for me? Did you do something wrong?"</label><br>
+             </div>
 
-  </div>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
+             <!-- Question 7 -->
+             <div class="question">
+                 <p>7. You're planning a vacation. Who picks the destination?</p>
+                 <label><input type="radio" name="q7" value="10" required> We decide together, considering both our dreams.</label><br>
+                 <label><input type="radio" name="q7" value="5"> Usually him, I trust his taste.</label><br>
+                 <label><input type="radio" name="q7" value="1"> Me, always. He'd pick somewhere boring.</label><br>
+             </div>
+
+             <!-- Question 8 -->
+             <div class="question">
+                 <p>8. How do you feel about his friends?</p>
+                 <label><input type="radio" name="q8" value="10" required> I love them! They're like my friends too.</label><br>
+                 <label><input type="radio" name="q8" value="5"> They're alright, we get along.</label><br>
+                 <label><input type="radio" name="q8" value="1"> I tolerate them for his sake.</label><br>
+             </div>
+
+             <!-- Question 9 -->
+             <div class="question">
+                 <p>9. What's your favorite thing about him?</p>
+                 <label><input type="radio" name="q9" value="10" required> Everything! His smile, kindness, humor...</label><br>
+                 <label><input type="radio" name="q9" value="5"> His sense of humor, it always makes me laugh.</label><br>
+                 <label><input type="radio" name="q9" value="1"> He has a car.</label><br>
+             </div>
+
+             <!-- Question 10 -->
+             <div class="question">
+                 <p>10. Imagine a future without him. How do you feel?</p>
+                 <label><input type="radio" name="q10" value="10" required> Devastated, it's unimaginable!</label><br>
+                 <label><input type="radio" name="q10" value="5"> Sad, but I'd move on eventually.</label><br>
+                 <label><input type="radio" name="q10" value="1"> Free.</label><br>
+             </div>
+
+             <button type="submit" id="submit-survey-btn">Submit Survey</button>
+         </form>
+
+         <div id="result"></div>
+     </div>
+     <script src="script.js"></script>
+ </body>
+ </html>
