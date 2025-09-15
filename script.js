@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       // TODO: Replace with Google Script Web App URL for email notification
-      fetch("https://script.google.com/macros/s/AKfycbxxY3APfkooNw2RIIQhkk-e39CQ7u0EkyQ1LyooOMUAYY_abNx30DMXQ4r8832Xp1IBnw/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxtRzyZNshPERPH5JcCB0dBb1NpeLWUQKZ9A5aTzKA1/dev", {
         method: "POST",
         body: JSON.stringify(formData)
       });
