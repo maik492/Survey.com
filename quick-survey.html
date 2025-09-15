@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gramic — Quick Survey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="center">
+  <div class="card">
+    <h1 class="brand">Quick Survey</h1>
+    <p class="subtitle">Answer these short questions about your boyfriend</p>
+
+    <div id="who" class="small muted">Loading...</div>
+
+    <form id="surveyForm">
+      <div class="q">
+        <div class="qtxt">1) How often do you think about your boyfriend?</div>
+        <label><input type="radio" name="q1" value="10"> All the time ❤️</label>
+        <label><input type="radio" name="q1" value="7"> Very often</label>
+        <label><input type="radio" name="q1" value="4"> Sometimes</label>
+        <label><input type="radio" name="q1" value="1"> Rarely</label>
+      </div>
+
+      <div class="q">
+        <div class="qtxt">2) If he surprises you with a gift, what’s your reaction?</div>
+        <label><input type="radio" name="q2" value="10"> Hug him tight 🫂</label>
+        <label><input type="radio" name="q2" value="7"> Thank him happily</label>
+        <label><input type="radio" name="q2" value="4"> Smile a little</label>
+        <label><input type="radio" name="q2" value="1"> Just say okay</label>
+      </div>
+
+      <div class="q">
+        <div class="qtxt">3) If he feels sad, what will you do?</div>
+        <label><input type="radio" name="q3" value="10"> Cheer him up 💕</label>
+        <label><input type="radio" name="q3" value="7"> Ask what’s wrong</label>
+        <label><input type="radio" name="q3" value="4"> Wait until he talks</label>
+        <label><input type="radio" name="q3" value="1"> Ignore it</label>
+      </div>
+
+      <div class="q">
+        <div class="qtxt">4) Who apologizes first after an argument?</div>
+        <label><input type="radio" name="q4" value="10"> I usually do</label>
+        <label><input type="radio" name="q4" value="7"> He does</label>
+        <label><input type="radio" name="q4" value="4"> We both</label>
+        <label><input type="radio" name="q4" value="1"> Neither</label>
+      </div>
+
+      <button type="submit" class="btn">Access</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;">
+      <h2 id="scoreHeading">Your Love Score</h2>
+      <div id="scoreCircle" class="circle">0%</div>
+      <p id="scoreMsg" class="muted"></p>
+      <a id="restart" href="gramic.html" class="link">Try again</a>
+    </div>
+
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

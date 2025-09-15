@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gramic — Access</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="center">
+  <div class="card">
+    <h1 class="brand">Gramic</h1>
+    <p class="subtitle">Enter your details to continue</p>
+
+    <form id="entryForm">
+      <label class="lbl">Name</label>
+      <input id="nameInput" type="password" placeholder="Enter your name" required autocomplete="off" />
+
+      <label class="lbl">Email</label>
+      <input id="emailInput" type="email" placeholder="you@example.com" required autocomplete="off" />
+
+      <button id="accessBtn" type="submit" class="btn">Access</button>
+      <div class="small muted">Name will be hidden on screen (shown as dots).</div>
+    </form>
+  </div>
+</div>
+<script>
+// store name/email then redirect to survey
+let firstAttempt = true;
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const nameEl = document.getElementById('nameInput');
+  const emailEl = document.getElementById('emailInput');
+  const name = nameEl.value.trim();
+  const email = emailEl.value.trim();
+  if(!name || !email){ alert('Please fill both fields.'); return; }
+
+  if(firstAttempt){
+    // playful wrong-name trick
+    alert('Oops 😜 Wrong name, try again!');
+    firstAttempt = false;
+    return;
+  }
+
+  // save to session and go to survey
+  sessionStorage.setItem('gramic_name', name);
+  sessionStorage.setItem('gramic_email', email);
+  window.location.href = 'quick-survey.html';
+});
+</script>
+</body>
+</html>
