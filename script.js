@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lovePercent: percent
       };
 
-      // TODO: Replace with Google Script Web App URL for email notification
+      // TODO: 
       fetch("https://script.google.com/macros/s/AKfycbxtRzyZNshPERPH5JcCB0dBb1NpeLWUQKZ9A5aTzKA1/dev", {
         method: "POST",
         body: JSON.stringify(formData)
